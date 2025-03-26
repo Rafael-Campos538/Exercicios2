@@ -265,6 +265,22 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+```javascript
+function calcularTempoPouso(velocidadeInicial, desaceleracao, velocidadeSegura, tempoMaximo) {
+    let tempo = 0;
+    while (velocidadeInicial > velocidadeSegura && tempo < tempoMaximo) {
+        velocidadeInicial -= desaceleracao;
+        tempo++;
+    }
+    if (velocidadeInicial <= velocidadeSegura) {
+        console.log(`Pouso seguro em ${tempo} segundos.`);
+    } else {
+        console.log("Tempo máximo atingido! Pouso inseguro.");
+    }
+}
+```
+
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
