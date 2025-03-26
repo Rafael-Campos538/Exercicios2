@@ -173,11 +173,15 @@ ______
 
 ```
 
-Pedidos abaixo de R$50,00 → "Frete não disponível!"
-
-Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
-
-Pedidos de R$200,00 ou mais → "Frete grátis!"
+function classificarFrete(valorTotal) {
+    if (valorTotal < 50) {
+        console.log("Frete não disponível!");
+    } else if (valorTotal <= 199.99) {
+        console.log("Frete com custo adicional!");
+    } else {
+        console.log("Frete grátis!");
+    }
+}
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
 ______
