@@ -172,7 +172,6 @@ ______
 **7)** Uma loja online deseja implementar um sistema de classificação de pedidos com base no valor total da compra. O sistema deve determinar a categoria de um pedido com as seguintes regras:
 
 ```
-
 function classificarFrete(valorTotal) {
     if (valorTotal < 50) {
         console.log("Frete não disponível!");
@@ -182,6 +181,12 @@ function classificarFrete(valorTotal) {
         console.log("Frete grátis!");
     }
 }
+console.log("Frete para R$ 30,00:");
+classificarFrete(30);
+console.log("Frete para R$ 100,00:");
+classificarFrete(100);
+console.log("Frete para R$ 200,00:");
+classificarFrete(200);
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
 ______
